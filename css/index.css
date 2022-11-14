@@ -1,0 +1,434 @@
+/* css 初始化代码  css reset */
+
+* {
+	/* 清除默认内外边距 */
+	margin: 0;
+	padding: 0;
+	/* 內减模式 */
+	box-sizing: border-box;
+}
+/* 去掉列表默认样式 */
+li {
+	list-style: none;
+}
+/* 去掉链接默认下划线 */
+a {
+	text-decoration: none;
+}
+/*去掉button 默认自带的边框*/
+button {
+	border: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+}
+.clearfix::after {
+	clear: both;
+}
+
+body {
+	background-color: #f3f5f7;
+	height: 3000px;
+}
+/* 学成在线的版心 */
+.w {
+	width: 1200px;
+	margin: auto;
+}
+/* header头部模块 */
+.header {
+	height: 41px;
+	/* background-color: pink; */
+	/* margin: 30px auto; */
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.logo {
+	float: left;
+}
+.nav {
+	float: left;
+	margin: 0 70px;
+}
+.nav ul li {
+	float: left;
+	margin-right: 15px;
+}
+.nav ul li a {
+	/* a是什么元素？ */
+	/* 行内元素能给上下的内边距吗 */
+	display: block;
+	padding: 8px 10px;
+	font-size: 18px;
+	color: #050505;
+}
+.nav ul li a:hover {
+	border-bottom: 2px solid #00a4ff;
+}
+/* search */
+.search {
+	float: left;
+}
+.search input {
+	float: left;
+	width: 361px;
+	height: 41px;
+	border: 1px solid #00a4ff;
+	/* 取消表单轮廓线 */
+	outline: none;
+	font-size: 14px;
+	padding-left: 20px;
+}
+/* 可以更改placeholder的文字颜色 */
+.search input::placeholder {
+	color: #bfbfbf;
+}
+.search button {
+	cursor: pointer;
+	float: left;
+	width: 51px;
+	height: 41px;
+	background-color: #00a4ff;
+}
+.user {
+	float: left;
+	margin-left: 30px;
+	padding-top: 5px;
+}
+.user img {
+	/* 可以让图片和文字垂直居中 */
+	vertical-align: middle;
+	margin-right: 5px;
+}
+/* banner 部分 */
+.banner {
+	height: 420px;
+	/* 上一级 ../ */
+	background: #1c036c url(../images/banner2.png) no-repeat top center;
+}
+.category {
+	float: left;
+	width: 190px;
+	height: 420px;
+	background: rgba(0, 0, 0, 0.3);
+	padding-top: 8px;
+}
+.category ul li a {
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	/* padding-left: 20px;
+    padding-right: 20px; */
+	padding: 0 20px;
+	color: #fff;
+	font-size: 14px;
+}
+/* 伪元素 */
+.category ul li a::after {
+	content: '>';
+	float: right;
+	/* margin-right: 20px; */
+}
+.category ul li a:hover {
+	background: rgba(0, 0, 0, 0.6);
+	color: #00a4ff;
+}
+.course {
+	float: right;
+	width: 228px;
+	height: 300px;
+	background-color: #fff;
+	margin-top: 50px;
+}
+.course h2 {
+	height: 48px;
+	background-color: #9bceea;
+	text-align: center;
+	line-height: 48px;
+	color: #fff;
+	font-size: 18px;
+}
+.course ul {
+	margin-top: 8px;
+	padding: 0 20px;
+}
+.course ul li {
+	height: 60px;
+	padding-top: 12px;
+	border-bottom: 1px solid #ccc;
+}
+.course ul li h4 {
+	font-weight: 400;
+	color: #4e4e4e;
+}
+.course ul li p {
+	font-size: 14px;
+	color: #a5a5a5;
+}
+
+.all {
+	display: block;
+	/* width: 200px; */
+	height: 41px;
+	border: 1px solid #00a4ff;
+	margin: 5px 14px;
+	text-align: center;
+	line-height: 41px;
+	color: #00a4ff;
+	font-weight: 700;
+}
+.all:hover {
+	background-color: #00a4ff;
+	color: #fff;
+}
+/* tag 标签模块 */
+.tag {
+	position: sticky;
+	top: 10px;
+	height: 60px;
+	background-color: #fff;
+	margin-top: 8px;
+	line-height: 60px;
+	/* 盒子阴影 */
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	z-index: 99;
+}
+.tag h3 {
+	float: left;
+	font-size: 16px;
+	color: #00a4ff;
+	margin: 0 30px;
+}
+.goods-item {
+	float: left;
+}
+.goods-item a {
+	color: #050505;
+	font-size: 16px;
+	border-left: 1px solid #ccc;
+	padding: 0 30px;
+}
+.mod {
+	float: right;
+	margin-right: 26px;
+	font-size: 14px;
+	color: #00a4ff;
+}
+
+.floor-hd {
+	height: 40px;
+	/* background-color: orange; */
+	margin-top: 30px;
+}
+
+.floor-hd h3 {
+	float: left;
+	font-size: 20px;
+	font-weight: 400;
+	color: #494949;
+}
+
+.floor-hd .more {
+	float: right;
+	font-size: 12px;
+	color: #a5a5a5;
+	margin-top: 8px;
+	margin-right: 40px;
+}
+
+.rec-inner ul li {
+	position: relative;
+	float: left;
+	width: 228px;
+	height: 270px;
+	background-color: #fff;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	transition: all .2s linear;
+	top: 0;
+}
+
+.rec-inner ul li:hover {
+	top: -5px;
+	box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+}
+
+.rec-inner .hot {
+	position: absolute;
+	top: 0;
+	right: -3px;
+}
+
+.rec-inner ul li:nth-child(5n) {
+	margin-right: 0;
+}
+
+.rec-inner ul li h4 {
+	font-size: 14px;
+	color: #050505;
+	font-weight: 400;
+	margin: 25px 20px 10px 24px;
+}
+
+.rec-inner ul li p {
+	font-size: 12px;
+	color: #999999;
+	font-weight: 400;
+	margin-left: 22px;
+}
+
+.rec-inner ul li p span {
+	color: #ff7c2d;
+}
+
+.box {
+	height: 200px;
+	background-color: rgb(32, 30, 30);
+}
+
+.floor-hd ul {
+	float: left;
+	margin-left: 350px;
+	margin-top: 5px;
+}
+
+.floor-hd ul li {
+	float: left;
+	margin-right: 70px;
+	font-size: 16px;
+}
+
+.floor-hd ul li a {
+	color: #868686;
+}
+.floor-hd ul li a.active {
+	color: #00a4ff;
+}
+
+.pro-inner {
+	height: 392px;
+	/* background-color: orange; */
+}
+
+.left {
+	float: left;
+	width: 228px;
+	height: 392px;
+	background-color: #fff;
+}
+
+.right {
+	float: right;
+	width: 957px;
+	height: 392px;
+	/* background-color: rgb(227, 156, 156); */
+}
+
+.right-bottom ul {
+	margin-top: 22px;
+}
+
+.right-bottom ul li {
+	float: left;
+	width: 228px;
+	height: 270px;
+	background-color: #fff;
+	margin-right: 15px;
+}
+.right-bottom ul li:nth-child(4) {
+	margin-right: 0;
+}
+
+.right-bottom ul li h3 {
+	height: 50px;
+	margin: 25px 20px 0;
+	font-size: 14px;
+	color: #050505;
+	font-weight: 400;
+}
+
+.right-bottom ul li p {
+	margin-left: 20px;
+	font-size: 12px;
+	color: #999999;
+}
+
+.right-bottom ul li span {
+	color: #ff7c2d;
+}
+
+.footer {
+	height: 417px;
+	background-color: #fff;
+	margin-top: 40px;
+	padding-top: 30px;
+}
+
+.footer-l {
+	float: left;
+	padding-left: 20px;
+}
+
+.footer-l p {
+	font-size: 12px;
+	color: #666;
+	line-height: 18px;
+	margin: 25px 0 15px;
+}
+
+.footer-l a {
+	display: block;
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	border: solid 1px #00a4ff;
+	font-size: 16px;
+	color: #00a4ff;
+	font-weight: 600;
+}
+
+.footer-r {
+	float: right;
+	margin-right: 30px;
+}
+
+.footer-r dl {
+	float: left;
+	margin-left: 123px;
+}
+
+.footer-r dl dt {
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.footer-r dl dd {
+	font-size: 12px;
+	line-height: 21px;
+}
+
+.footer-r dl dd a {
+	color: #333;
+}
+
+.nav-hub {
+	position: fixed;
+
+	left: 50%;
+	margin-left: -803px;
+
+	top: 50%;
+	margin-top: -235px;
+
+	width: 183px;
+	height: 470px;
+	background-color: #fff;
+}
